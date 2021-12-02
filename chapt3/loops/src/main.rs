@@ -33,15 +33,13 @@ fn main() {
     println!("Gbese");
 
     //---For loops are mostly used to loop through a collection---
-
     let coll = [1,2,3,4,5];
 
     for el in coll.iter() {
         println!("value is: {}", el);
     }
 
-    // For loops can be used with a range
-
+    // For loops can be used with a range 
     for num in 1..5 {
         println!("{}!", num);
     }
