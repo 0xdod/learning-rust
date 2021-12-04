@@ -32,6 +32,7 @@ fn main() {
 }
 
 fn print_gender(gender: Gender) {
+    
     // matches are exhaustive, i.e yo must check all possiblites
     // the exhaustiveness can be bypassed by using placholder value `_` as the last pattern. You won't have to check all possiblites
     // `if let` idiom is an improvement over the placholder technique. It is useful if we only want to match one thing.
