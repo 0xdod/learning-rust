@@ -18,13 +18,11 @@ mod back_of_house {
     }
 
     fn cook_order() {}
-q
+
     pub enum Appetizer {
         Soup(String),
         Salad,
     }
-
-
 
     pub struct Breakfast {
         pub toast: String, // public
