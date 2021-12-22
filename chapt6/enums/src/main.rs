@@ -19,7 +19,7 @@ fn main() {
 //
 //   let _some_value = Some("value"); // T == &str
 //    let _another_value = Option::Some("value"); // You dont necessarily have to use Option:: for Option enum.
-//    let _null_value: Option<String> = None; // declaring a null value in rust
+//    let _null_value: Option<String> = None; // how to test a null value in rust
 
     let confusion = Gender::Other(String::from("genderfluid"));
     // if let Gender::Male = confusion {
