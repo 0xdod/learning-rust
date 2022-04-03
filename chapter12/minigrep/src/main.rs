@@ -1,14 +1,20 @@
 /**
  * minigrep is a basic implementation of the popular unix command-line tool grep.
  */
+use std::env;
+use std::process;
 
-use std::env; // bring this module to scope
+use minigrep::Config;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    let query = &args[1];
-    let filename = &args[2];
-   //  println!("{:?}", args); // use debug formatter :? to print args
-    println!("Searching for {}", query);
-    println!("In file {}", filename);
+    let config = Config::new(&args).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {}", err);
+        process::exit(1);
+    });
+
+    if let Err(e) = minigrep::run(config) {
+        eprintln!("Application error: {}", e);
+        process::exit(1);
+    }
 }
